@@ -1,128 +1,96 @@
-/* Styles généraux du corps */
+/* Styles généraux pour le corps de la page */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
-    color: #6b83cc;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Un gris très clair, doux pour les yeux */
+    color: #151414; /* Un gris foncé pour le texte */
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* S'assure que le contenu prend toute la hauteur de la page */
 }
 
-/* Conteneur principal */
+/* Conteneur principal qui centre le formulaire */
 .container {
-    max-width: 800px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Prend 90% de la largeur sur mobile */
+    max-width: 700px; /* Limite la largeur sur les grands écrans */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet 3D */
+    margin: 20px auto;
 }
 
-/* Styles de l'en-tête */
+/* En-tête du formulaire */
 .main-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    justify-content: center;
+    gap: 15px; /* Espace entre le logo et le titre */
 }
 
-.header-content .logo {
-    width: 80px;
+.logo {
+    width: 60px; /* Taille du logo */
     height: auto;
-    margin-right: 20px;
 }
 
-.header-content .site-title {
-    margin: 0;
-    font-size: 2.5em;
-    color: #007bff;
-}
-
-.header-slogan {
-    text-align: left;
+.site-title {
+    font-size: 24px;
+    color: #5275f4; /* Bleu foncé de l'UPG */
 }
 
 .header-slogan p {
     margin: 5px 0;
-    color: #666;
+    font-size: 14px;
+    color: #0e1013;
 }
 
-/* Animation du titre au titre*/
-.texte-anime {
-    display: inline-block;
-    color: #007bff;
-    animation-name: mouvement;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-}
-
-@keyframes mouvement {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-10px);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Styles des fieldsets et des groupes de formulaires */
+/* Styles pour les sections (fieldset) */
 fieldset {
-    border: 2px solid #4b90db;
+    border: 1px solid #aca1cb;
     border-radius: 8px;
-    padding: 25px;
-    margin: 0 0 25px 0;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-legend {    
-    font-size: 1.3em;
+legend {
+    font-size: 1.2em;
     font-weight: bold;
-    color: #6b83cc; /* Couleur de texte de légende */
+    color: #003366;
     padding: 0 10px;
 }
 
+/* Styles pour les groupes de formulaire (labels et inputs) */
 .form-group {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 15px;
 }
 
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 8px;
+label {
+    display: block; /* Chaque label sur une nouvelle ligne */
+    margin-bottom: 5px;
+    font-weight: bold;
     color: #555;
 }
 
-.form-group input,
-.form-group select {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1em;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* S'assure que le padding n'augmente pas la largeur */
+    font-size: 16px;
 }
 
 /* Bouton de soumission */
@@ -131,19 +99,39 @@ legend {
     margin-top: 20px;
 }
 
-.form-actions button {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 40px;
+button[type="submit"] {
+    background-color: #003366;
+    color: #fff;
+    padding: 12px 25px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.form-actions button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+button[type="submit"]:hover {
+    background-color: #60acf8; /* Un bleu légèrement plus foncé au survol */
+}
+
+/* Media Query pour les écrans plus grands (tablettes et desktops) */
+@media (min-width: 768px) {
+    .main-header {
+        margin-bottom: 50px;
+    }
+
+    .site-title {
+        font-size: 32px;
+    }
+}
+
+/* Animation subtile pour le titre (facultatif mais stylé) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.texte-anime {
+    animation: fadeIn 1s ease-in-out;
 }

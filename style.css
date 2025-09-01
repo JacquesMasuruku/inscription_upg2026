@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* S'assure que le contenu prend toute la hauteur de la page */
+    min-height: 100vh; /* Pour me rassurer que le contenu prend toute la hauteur de la page */
 }
 
 /* Conteneur principal qui centre le formulaire */
@@ -18,7 +18,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet 3D */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
 }
 
@@ -34,11 +34,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Espace entre le logo et le titre */
+    gap: 13px; /* Espace entre le logo et le titre */
 }
 
 .logo {
-    width: 60px; /* Taille du logo */
+    width: 60px; /* Taille de mon logo */
     height: auto;
 }
 
@@ -148,3 +148,4 @@ button[type="submit"]:hover {
 .main-footer p {
     margin: 3px 0;
 }
+

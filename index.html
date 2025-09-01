@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription à l'UPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="LOGO_UPG.png">
+</head>
+<body>
+
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <img src="LOGO_UPG.png" alt="Logo UPG" class="logo">
+                <h1 class="site-title"><span class="texte-anime">Inscription en ligne U.P.G</span></h1>
+            </div>
+            <div class="header-slogan">
+                <p>Nous vous souhaitons la bienvenue à l'Université Polytechnique de Goma</p>
+                <p>Ce formulaire vous permet de commander une inscription académique.</p>
+            </div>
+        </header>
+
+        <form action="https://script.google.com/macros/s/AKfycby72xqKbo3fy1NQYKdkdEbWQs4pVSLSyhtzmP_AI4vkDFxMKW8bPpLK_5iHHudfjyFr/exec" method="POST">
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="postnom">Postnom :</label>
+                    <input type="text" id="postnom" name="postnom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexe">Sexe :</label>
+                    <select id="sexe" name="sexe" required>
+                        <option value="">Sélectionnez votre genre</option>
+                        <option value="Masculin">Masculin</option>
+                        <option value="Féminin">Féminin</option>         
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lieu_naissance">Lieu de naissance :</label>
+                    <input type="text" id="lieu_naissance" name="lieu_naissance" required>
+                </div>
+                <div class="form-group">
+                    <label for="date_naissance">Date de naissance :</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact</legend>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Numéro de téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="adresse">Votre adresse de résidence:</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Promotion</legend>
+                <div class="form-group">
+                    <label for="promotion">Niveau d'études :</label>
+                    <select id="promotion" name="promotion" required>
+                        <option value="">Sélectionnez une promotion</option>
+                        <option value="L1">L1 LMD</option>
+                        <option value="L2">L2 LMD</option>
+                        <option value="L3">L3 LMD</option>
+                        <option value="M1">Master 1</option>
+                        <option value="M2">Master 2</option>
+                        <option value="MS">Master Spécial</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Choix de faculté</legend>
+                <div class="form-group">
+                    <label for="faculte">Faculté d'études :</label>
+                    <select id="faculte" name="faculte" required>
+                        <option value="">Sélectionnez une faculté</option>
+                        <option value="Polytechnique">Polytechnique</option>
+                        <option value="Management">Management</option>
+                        <option value="Génie Civil">Génie Civil</option>
+                        <option value="Génie Informatique">Génie Informatique</option>
+                        <option value="Génie Électrique">Génie Électrique</option>
+                        <option value="Sciences Économiques">Sciences Économiques</option>
+                        <option value="Sciences Agronomiques et Environnement">Sciences Agronomiques et Environnement</option>
+                        <option value="Techniques Rurales">Techniques Rurales</option>
+                    </select>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <button type="submit">S'inscrire</button>
+            </div>

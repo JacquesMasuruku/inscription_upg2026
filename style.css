@@ -135,3 +135,16 @@ button[type="submit"]:hover {
 .texte-anime {
     animation: fadeIn 1s ease-in-out;
 }
+/* Styles pour le pied de page */
+.main-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #3a3185;
+    font-size: 14px;
+    color: #3fa034;
+}
+
+.main-footer p {
+    margin: 3px 0;
+}
